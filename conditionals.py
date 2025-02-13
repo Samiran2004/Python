@@ -21,3 +21,9 @@ elif choice == "%":
     print(num1 % num2)
 else:
     print("Please enter a valid option...")
+
+age = 20
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
