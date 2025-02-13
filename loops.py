@@ -23,3 +23,14 @@ for cloud in list_of_cloud:
 
 for i in range(1,11):
     print(i)
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+for i in range(5):
+    print(i)
+
+count = 0
+while count < 5:
+    print(count)
+    count += 1
