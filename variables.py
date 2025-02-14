@@ -16,3 +16,13 @@ print(x>y)
 print(x and y > 0)
 x += 5
 print(x)
+
+
+#Dictionary...
+person = {
+    "name": "Samiran",
+    "age": 20,
+    "isLoggedin": True
+}
+
+print(person.get("age"))
