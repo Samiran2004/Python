@@ -1,0 +1,17 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+    
+    "description": "Example config file to test with a homebridge-dummy switch.",
+
+    "accessories": [
+        {
+            "accessory": "DummySwitch",
+            "name": "A dummy switch"
+        }
+    ]
+}

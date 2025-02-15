@@ -1,0 +1,2 @@
+This is a log entry.
+Another log entry using 'a' method.
