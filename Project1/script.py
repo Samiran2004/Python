@@ -23,9 +23,13 @@ def create_backup():
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H")
     backUp_path = os.path.join(BACKUP_FOLDER, f"backup_{timestamp}")
 
-    shutil.copytree(SOURCE_FOLDER, backUp_path)
-    logging.info(f"Backup created: {backUp_path}")
-    print(f"Backup created: {backUp_path}")
+    try:
+        shutil.copytree(SOURCE_FOLDER, backUp_path)
+        logging.info(f"Backup created: {backUp_path}")
+        print(f"Backup created: {backUp_path}")
+    except:
+        logging.warning(f"Skipping invalid folder: {backUp_path}")
+        print(f"Skipping Backup folder already exist: {backUp_path}")
 
 ## Function to remove old backups...
 def deleteOldBackup():
@@ -33,9 +37,7 @@ def deleteOldBackup():
         folder_path = os.path.join(BACKUP_FOLDER, folder)
         if os.path.isdir(folder_path):
             timestamp = folder.replace("backup_", "")
-            print(timestamp)
             folder_time = datetime.datetime.strptime(timestamp, "%Y-%m-%d_%H")
-            print(folder_time)
             age = (datetime.datetime.now() - folder_time).days
             if age > RETENTION_TIME:
                 shutil.rmtree(folder_path)
