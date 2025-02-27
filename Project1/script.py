@@ -3,8 +3,11 @@ import datetime
 import logging
 import json
 import shutil
+import zipfile
 
 ## Setup logging...
+if not os.path.exists("logs"):
+    os.mkdir("logs")
 logging.basicConfig(filename="logs/backup.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
 ## Load config file...
@@ -14,11 +17,14 @@ with open("configs.json", "r") as config_file:
 SOURCE_FOLDER = config["source_folder"]
 BACKUP_FOLDER = config["backup_folder"]
 RETENTION_TIME = config["retention_time"]
+ARCHIVE_FOLDER = config["archive_folder"]
 
 ## Function to create backup...
 def create_backup():
     # If BACKUP_FOLDER is not exist, then create using os.mkdir()
     if not os.path.exists(BACKUP_FOLDER):
+        print(f"{BACKUP_FOLDER} is not exist, Creating {BACKUP_FOLDER}...")
+        logging.info(f"{BACKUP_FOLDER} is not exist, Creating {BACKUP_FOLDER}...")
         os.mkdir(BACKUP_FOLDER)
     
     # Create a timestamp using datetime and format it like:-> 2025-02-17_08
@@ -37,7 +43,7 @@ def create_backup():
         logging.warning(f"Skipping invalid folder: {backUp_path}")
         print(f"Skipping Backup folder already exist: {backUp_path}")
 
-## Function to remove old backups...
+## Function to remove old backups and create a zip...
 def deleteOldBackup():
     # Error handling using try-except
     try:
@@ -51,8 +57,10 @@ def deleteOldBackup():
                 timestamp = folder.replace("backup_", "")
                 folder_time = datetime.datetime.strptime(timestamp, "%Y-%m-%d_%H")
                 age = (datetime.datetime.now() - folder_time).days
-                # Delete the folder if the folder is older than RETENTION_TIME
+                # Archive and delete the folder if the folder is older than RETENTION_TIME
                 if age > RETENTION_TIME:
+                    archive_path = os.path.join(ARCHIVE_FOLDER, f"{folder}")
+                    shutil.make_archive(archive_path, "zip", folder_path)
                     shutil.rmtree(folder_path)
                     logging.info("Old Bakup folder deleted.")
                     print("Old Bakup folder deleted.")

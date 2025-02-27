@@ -1,5 +1,6 @@
 {
     "source_folder": "source",
     "backup_folder": "backups",
-    "retention_time": 7
+    "archive_folder": "archives",
+    "retention_time": 2
 }

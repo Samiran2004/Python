@@ -1,1 +1,4 @@
-2025-02-23 10:17:47,275 - Backup created: backups/backup_2025-02-23_10
+2025-02-27 14:24:00,187 - Backup created: backups/backup_2025-02-27_14
+2025-02-27 14:24:09,674 - Old Bakup folder deleted.
+2025-02-27 14:24:35,224 - backups is not exist, Creating backups...
+2025-02-27 14:24:38,756 - Backup created: backups/backup_2025-02-27_14
