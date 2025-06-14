@@ -22,3 +22,5 @@ def getCoordinate():
 
 x,y = getCoordinate()
 print(f"x: {x}, y: {y}")
+
+print(f"Type of tuple: {type(my_tuple)}")
