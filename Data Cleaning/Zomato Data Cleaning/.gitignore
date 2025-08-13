@@ -1,0 +1,8 @@
+# Large CSV files
+*.csv
+Data Cleaning/Linkedin Job Posting Data Cleaning/datas/postings.csv
+Data Cleaning/Linkedin Job Posting Data Cleaning/cleaned_data/postings_cleaned_data.csv
+# Large data files
+*.csv
+datas/
+cleaned_data/
