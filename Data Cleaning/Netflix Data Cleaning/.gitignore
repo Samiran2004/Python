@@ -1,0 +1,6 @@
+# Large CSV files
+*.csv
+# Large data files
+*.csv
+datasets/
+cleaned_data/
