@@ -10,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="31MEEFhuYAY9urUw7J2ptAtj2H1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,7 +24,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "data",
-    "last_opened_file_path": "/home/samiransamanta/Python/Data Cleaning/HR Data Cleaning"
+    "last_opened_file_path": "/home/samiransamanta/Python/Numpy Tutorial"
   }
 }]]></component>
   <component name="SharedIndexes">
