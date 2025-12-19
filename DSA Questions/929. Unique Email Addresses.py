@@ -10,3 +10,7 @@ def numUniqueEmails(emails: List[str])-> int:
         unique.add((local, domain))
     
     return len(unique)
+
+emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+result = numUniqueEmails(emails=emails)
+print(result)
