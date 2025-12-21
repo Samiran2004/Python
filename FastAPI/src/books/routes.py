@@ -13,7 +13,7 @@ async def get_all_books():
 @book_router.get('/{book_id}')  #* For get a book by id...
 async def get_book_by_id(book_id: int)-> dict:
     for book in books:
-      if book["id"] is book_id:
+      if book["id"] == book_id:
          return book
 
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book Not Found!")
@@ -22,12 +22,12 @@ async def get_book_by_id(book_id: int)-> dict:
 async def create_new_book(book_data: Book)-> Book:
     new_book = book_data.model_dump()
     books.append(new_book)
-    return new_book
+    return new_book # type: ignore
 
 @book_router.patch('/{book_id}', status_code=status.HTTP_200_OK)  #* For update a book...
-async def update_book(book_id: int, book_update_data: BookUpdateModel):
+async def update_book(book_id: int, book_update_data: BookUpdateModel): # type: ignore
     for book in books:
-        if book['id'] is book_id:
+        if book['id'] == book_id:
             book['title'] = book_update_data.title
             book['author'] = book_update_data.author
             book['publisher'] = book_update_data.publisher
@@ -42,7 +42,7 @@ async def update_book(book_id: int, book_update_data: BookUpdateModel):
 @book_router.delete('/{book_id}', status_code=status.HTTP_200_OK)  #* For delete a book...
 async def update_book(book_id: int):
     for book in books:
-        if book["id"] is book_id:
+        if book["id"] == book_id:
             books.remove(book)
 
             return {}

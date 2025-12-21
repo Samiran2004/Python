@@ -6,8 +6,9 @@ class Settings(BaseSettings):
     APP_NAME: str
     VERSION: str
     DESCRIPTION: str
+    DATABASE_URL: str
 
     class Config:
         env_file = os.path.join(Path(__file__).parent, ".env")
 
-settings = Settings()
+settings = Settings() # type: ignore
