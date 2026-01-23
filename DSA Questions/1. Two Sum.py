@@ -14,7 +14,7 @@ def twoSum(nums: List[int], target: int)-> List[int]:
 
     for i, n in enumerate(nums):
         diff = target - n
-        if diff in prevMap:
+        if diff in prevMap: 
             return [prevMap[diff], i]
         prevMap[n] = i
     return []
