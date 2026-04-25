@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f92dd889-77c4-4933-b8bf-dfe2bdc33210" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../FastAPI/app/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/uv.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3BNUx6h0fTHdyrPqXal5xNc5nCs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/zephyrus/projects/Data Engineering/FastAPI"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f92dd889-77c4-4933-b8bf-dfe2bdc33210" name="Changes" comment="" />
+      <created>1774329264379</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774329264379</updated>
+    </task>
+    <servers />
+  </component>
+</project>
