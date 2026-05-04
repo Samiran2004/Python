@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.14 (Maths, Pattern &amp; Recursion)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.14" project-jdk-type="Python SDK" />
 </project>
